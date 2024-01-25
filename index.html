@@ -1,1 +1,26 @@
-
+<html lang="ja">
+<head>
+  <meta charset="utf-8"/>
+  <script src="https://cdn.jsdelivr.net/npm/blockly@1.0.0/blockly_compressed.min.js"></script>    <!-- ライブラリを読み込む -->
+  <script src="https://cdn.jsdelivr.net/npm/blockly@1.0.0/blocks_compressed.min.js"></script>     <!-- ライブラリを読み込む -->
+  <script src="https://cdn.jsdelivr.net/npm/blockly@1.0.0/javascript_compressed.min.js"></script> <!-- ライブラリを読み込む -->
+  <script src="https://cdn.jsdelivr.net/npm/blockly@1.0.0/msg/js/ja.min.js"></script>             <!-- 日本語化 -->
+  <title>Blockly Sample</title>
+</head>
+<body>
+  <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>                                <!-- ワークスペースを用意 -->
+  <xml id="toolbox" style="display: none">                                                        <!-- ブロックサンプルを用意 -->
+    <block type="controls_if"></block>
+    <block type="controls_repeat_ext"></block>
+    <block type="logic_compare"></block>
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="text"></block>
+    <block type="text_print"></block>
+  </xml>
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',                                                  // ライブラリに読み込ませる
+      {toolbox: document.getElementById('toolbox')});
+  </script>
+</body>
+</html>
